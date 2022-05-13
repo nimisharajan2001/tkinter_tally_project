@@ -70,22 +70,58 @@ Label5.place(relx=0, rely=0, relheight=0.03, relwidth=0.999)
 
 global Canvas4
 Canvas4 = tk.Canvas(Canvas1, background="#ffffff", insertbackground="black", relief="ridge",selectbackground="blue", selectforeground="white")
-Canvas4.place(relx=0.330, rely=0.0300, relheight=0.100, relwidth=0.350)
-Label6 = Label(Canvas4,text='Name of group',borderwidth="0", width=12, background="white",
-                                     foreground="#00254a",
-                                     font="-family {Segoe UI} -size 12 -weight bold ")
-Label6.place(relx=0.35, rely=0.20, relheight=0.30, relwidth=0.300)
+Canvas4.place(relx=0.01, rely=0.040, relheight=0.760, relwidth=0.650)
+Label6 = Label(Canvas4,text='Name    ',borderwidth="0", width=7, background="white",foreground="#00254a",
+        font="-family {Segoe UI} -size 8 ")
+Label6.place(relx=0.00, rely=0.010, relheight=0.05, relwidth=0.200)
 Entry1 = Entry(Canvas4,width=28,borderwidth="3")
-Entry1.place(relx=0.35, rely=0.50, relheight=0.30, relwidth=0.300)
+Entry1.place(relx=0.2, rely=0.010, relheight=0.05, relwidth=0.300)
+Label7 = Label(Canvas4,text='(alias)   ',borderwidth="0", width=7, background="white",foreground="#00254a",
+        font="-family {Segoe UI} -size 8 ")
+Label7.place(relx=0.00, rely=0.070, relheight=0.05, relwidth=0.200)
+Entry1 = Entry(Canvas4,width=28,borderwidth="3")
+Entry1.place(relx=0.2, rely=0.070, relheight=0.05, relwidth=0.300)
+Label1 = Label(Canvas4,text='Under   :',borderwidth="0", width=7, background="white",foreground="#00254a",
+        font="-family {Segoe UI} -size 8 ")
+Label1.place(relx=0.0, rely=0.250, relheight=0.05, relwidth=0.200)
+Label1 = Label(Canvas4,text='Capital Account',borderwidth="0", width=7, background="white",foreground="#00254a",
+        font="-family {Segoe UI} -size 8 ")
+Label1.place(relx=0.160, rely=0.250, relheight=0.05, relwidth=0.200)
+Label8 = Label(Canvas4,text='Behaves like a sub-ledger',borderwidth="0", width=7, background="white",foreground="#00254a",
+        font="-family {Segoe UI} -size 8 ")
+Label8.place(relx=0.0, rely=0.40, relheight=0.05, relwidth=0.200)
+Entry1 = Entry(Canvas4,width=28,borderwidth="3")
+Entry1.place(relx=0.4, rely=0.400, relheight=0.05, relwidth=0.300)
+Label3 = Label(Canvas4,text='Nett debit\credit card balance',borderwidth="0", width=7, background="white",foreground="#00254a",
+        font="-family {Segoe UI} -size 8 ")
+Label3.place(relx=0.0, rely=0.460, relheight=0.05, relwidth=0.200)
+Entry1 = Entry(Canvas4,width=28,borderwidth="3")
+Entry1.place(relx=0.4, rely=0.460, relheight=0.05, relwidth=0.300)
+Label2 = Label(Canvas4,text='Used for calculation',borderwidth="0", width=7, background="white",foreground="#00254a",
+        font="-family {Segoe UI} -size 8 ")
+Label2.place(relx=0.02, rely=0.520, relheight=0.05, relwidth=0.200)
+Entry1 = Entry(Canvas4,width=28,borderwidth="3")
+Entry1.place(relx=0.4, rely=0.520, relheight=0.05, relwidth=0.300)
+Label1 = Label(Canvas4,text='Method to allocate',borderwidth="0", width=7, background="white",foreground="#00254a",
+        font="-family {Segoe UI} -size 8")
+Label1.place(relx=0.02, rely=0.580, relheight=0.05, relwidth=0.200)
+Entry1 = Entry(Canvas4,width=28,borderwidth="3")
+Entry1.place(relx=0.4, rely=0.580, relheight=0.05, relwidth=0.300)
+sbmibtn=Button(Canvas4,text='Save',borderwidth="0",background="#023047",
+                                     foreground="white",width=10,font="-family {Segoe UI} -size 12 -weight bold ").place(relx=0.6, rely=0.680)
+sbmibtn=Button(Canvas4,text='Exit',borderwidth="0",background="#023047",
+                                     foreground="white",width=10,font="-family {Segoe UI} -size 12 -weight bold ").place(relx=0.8, rely=0.680)
 
 
-global Canvas2
-Canvas2 = tk.Canvas(Canvas1, background="#ffffff", insertbackground="black", relief="ridge",selectbackground="blue", selectforeground="white")
-Canvas2.place(relx=0.330, rely=0.120, relheight=0.300, relwidth=0.350)
-Label5 = Label(Canvas2,text='List of groups',borderwidth="0", width=3, background="#3385ff",
-                                     foreground="#00254a",
-                                     font="-family {Segoe UI} -size 10 -weight bold ")
-Label5.place(relx=0, rely=0, relheight=0.3, relwidth=0.999)
+
+
+# global Canvas2
+# Canvas2 = tk.Canvas(Canvas1, background="#ffffff", insertbackground="black", relief="ridge",selectbackground="blue", selectforeground="white")
+# Canvas2.place(relx=0.330, rely=0.120, relheight=0.300, relwidth=0.350)
+# Label5 = Label(Canvas2,text='List of groups',borderwidth="0", width=3, background="#3385ff",
+#                                      foreground="#00254a",
+#                                      font="-family {Segoe UI} -size 10 -weight bold ")
+# Label5.place(relx=0, rely=0, relheight=0.3, relwidth=0.999)
 
 
 
