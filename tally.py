@@ -10,9 +10,14 @@ def Stock_Query():
     global Canvas1
     Canvas1 = tk.Canvas( background="#B0B0B0", insertbackground="black", relief="ridge",selectbackground="blue", selectforeground="white")
     Canvas1.place(relx=0, rely=0.070, relheight=0.800, relwidth=.850)
-    Label5 = Label(Canvas1,text='Company name',borderwidth="0", width=3, background="#3385ff",
-                                     foreground="#00254a",
+    Label6 = Label(Canvas1,text='Select Stock Item',borderwidth="0", width=3, background="#3385ff",
+                                     foreground="#00254a", anchor='nw',
                                      font="-family {Segoe UI} -size 10 -weight bold ")
+    Label6.place(relx=0, rely=0, relheight=0.03, relwidth=0.999)
+   
+    Label5 = Label(Canvas1,text='Company name',borderwidth="0", width=3, background="#3385ff",
+                                        foreground="#00254a",anchor='n',
+                                        font="-family {Segoe UI} -size 10 -weight bold ")
     Label5.place(relx=0, rely=0, relheight=0.03, relwidth=0.999)
 
     global Canvas4
@@ -300,8 +305,6 @@ def create_group():
                                      foreground="white",width=10,font="-family {Segoe UI} -size 12 -weight bold ").place(relx=0.6, rely=0.680)
     sbmibtn=Button(Canvas4,text='Exit',borderwidth="0",background="#023047",
                                      foreground="white",width=10,font="-family {Segoe UI} -size 12 -weight bold ",command=Group_Analysis).place(relx=0.8, rely=0.680)
-
-
     global Canvas3
     Canvas3 = tk.Canvas(background="#e6ffff", insertbackground="black", relief="ridge",selectbackground="blue", selectforeground="white")
     Canvas3.place(relx=0.850, rely=0.100, relheight=0.8, relwidth=0.150)
@@ -807,7 +810,7 @@ def Ageing_Analysis():
                                      font="-family {Segoe UI} -size 10 -weight bold ")
     Label5.place(relx=0, rely=0, relheight=0.04, relwidth=0.999)
     btn=Button(Canvas2,text='Create',borderwidth="0",background="#e6ffff",activebackground="#e6ffff",
-                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=create_group).place(relx=0.6,y=38,relwidth=0.350)
+                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=create_age_group).place(relx=0.6,y=38,relwidth=0.350)
     btn1=Button(Canvas2,text='Stock1',borderwidth="0",background="#e6ffff",activebackground="#e6ffff",
                                    foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=selected_age_groups).place(relx=0,y=58,relwidth=0.250)
     btn2=Button(Canvas2,text='Stock2',borderwidth="0",background="#e6ffff",activebackground="#e6ffff",
@@ -816,6 +819,57 @@ def Ageing_Analysis():
     global Canvas3
     Canvas3 = tk.Canvas(background="#e6ffff", insertbackground="black", relief="ridge",selectbackground="blue", selectforeground="white")
     Canvas3.place(relx=0.850, rely=0.100, relheight=0.8, relwidth=0.150)
+
+def create_age_group():
+    global Canvas1
+    Canvas1 = tk.Canvas( background="#B0B0B0", insertbackground="black", relief="ridge",selectbackground="blue", selectforeground="white")
+    Canvas1.place(relx=0, rely=0.070, relheight=0.800, relwidth=.850)
+
+    global Canvas4
+    Canvas4 = tk.Canvas(Canvas1, background="#ffffff", insertbackground="white", relief="ridge",selectbackground="white", selectforeground="white")
+    Canvas4.place(relx=0.01, rely=0.040, relheight=0.460, relwidth=0.450)
+    Label6 = Label(Canvas4,text='Name',borderwidth="0", width=7, background="white",foreground="#00254a",
+        font="-family {Segoe UI} -size 8 ")
+    Label6.place(relx=0.00, rely=0.010, relheight=0.07, relwidth=0.200)
+    Entry1 = Entry(Canvas4,width=28,borderwidth="3")
+    Entry1.place(relx=0.2, rely=0.010, relheight=0.07, relwidth=0.350)
+    Label7 = Label(Canvas4,text='(alias)',borderwidth="0", width=7, background="white",foreground="#00254a",
+        font="-family {Segoe UI} -size 8 ")
+    Label7.place(relx=0.00, rely=0.080, relheight=0.07, relwidth=0.200)
+    Entry1 = Entry(Canvas4,width=28,borderwidth="3")
+    Entry1.place(relx=0.2, rely=0.080, relheight=0.07, relwidth=0.350)
+    Label1 = Label(Canvas4,text='Under',borderwidth="0", width=7, background="white",foreground="#00254a",
+        font="-family {Segoe UI} -size 8 ")
+    Label1.place(relx=0.0, rely=0.260, relheight=0.07, relwidth=0.200)
+    options_list = ["Primary","Group1", "Group2","Group3","Group4"]
+    cmb=ttk.Combobox(Canvas4,values=options_list,font=("times new roman",10))
+    cmb.place(relx=0.2, rely=0.260, relheight=0.07, relwidth=0.350)
+    
+    Label1 = Label(Canvas4,text='Should quantities of items to be added',borderwidth="0", width=7, background="white",foreground="#00254a",
+        font="-family {Segoe UI} -size 8 ")
+    Label1.place(relx=0.0, rely=0.450, relheight=0.07, relwidth=0.400)
+    options_list = ["Yes","No"]
+    cmb=ttk.Combobox(Canvas4,values=options_list,font=("times new roman",10))
+    cmb.place(relx=0.5, rely=0.450, relheight=0.07, relwidth=0.350)
+
+    Label1 = Label(Canvas4,text='Set/Alter GST Details',borderwidth="0", width=7, background="white",foreground="#00254a",
+        font="-family {Segoe UI} -size 8 ")
+    Label1.place(relx=0.0, rely=0.550, relheight=0.07, relwidth=0.400)
+    options_list = ["Yes","No"]
+    cmb=ttk.Combobox(Canvas4,values=options_list,font=("times new roman",10))
+    cmb.place(relx=0.5, rely=0.550, relheight=0.07, relwidth=0.350)
+   
+
+    sbmibtn=Button(Canvas4,text='Save',borderwidth="0",background="#023047",
+                                     foreground="white",width=8,font="-family {Segoe UI} -size 10 -weight bold ").place(relx=0.6, rely=0.720)
+    sbmibtn=Button(Canvas4,text='Exit',borderwidth="0",background="#023047",
+                                     foreground="white",width=8,font="-family {Segoe UI} -size 10 -weight bold ",command=Ageing_Analysis).place(relx=0.8, rely=0.720)
+
+
+    global Canvas3
+    Canvas3 = tk.Canvas(background="#e6ffff", insertbackground="black", relief="ridge",selectbackground="blue", selectforeground="white")
+    Canvas3.place(relx=0.850, rely=0.100, relheight=0.8, relwidth=0.150)
+
 
 def selected_age_groups():
         global selected_groups_frame
@@ -882,7 +936,7 @@ global Canvas1
 Canvas1 = tk.Canvas( background="#B0B0B0", relief="ridge")
 Canvas1.place(relx=0, rely=0.07, relheight=0.800, relwidth=.850)
 Label5 = Label(Canvas1,text='Gateway of Tally',borderwidth="0", width=3, background="#3385ff",
-                                     foreground="#00254a",
+                                     foreground="#00254a", anchor='w',
                                      font="-family {Segoe UI} -size 10 -weight bold ")
 Label5.place(relx=0, rely=0, relheight=0.03, relwidth=0.999)
 
@@ -905,7 +959,7 @@ btn2=Button(Canvas4,text='Movement Analysis',borderwidth="0",background="#e6ffff
                                      foreground="black",width=100,font="-family {Segoe UI} -size 10 ",command=Movement_Analysis).place(relx=0,y=108,relwidth=1)
 btn2=Button(Canvas4,text='Ageing Analysis',borderwidth="0",background="#e6ffff",activebackground="#e6ffff",
                                      foreground="black",width=100,font="-family {Segoe UI} -size 10 ",command=Ageing_Analysis).place(relx=0,y=138,relwidth=1)
-btn2=Button(Canvas4,text='Cost Estimation',borderwidth="0",background="#e6ffff",activebackground="#e6ffff",
+btn2=Button(Canvas4,text='COst Estimation',borderwidth="0",background="#e6ffff",activebackground="#e6ffff",
                                      foreground="black",width=100,font="-family {Segoe UI} -size 10 ").place(relx=0,y=178,relwidth=1)
 btn2=Button(Canvas4,text='Quit',borderwidth="0",background="#e6ffff",activebackground="#e6ffff",
                                      foreground="black",width=100,font="-family {Segoe UI} -size 10 ").place(relx=0,y=218,relwidth=1)
