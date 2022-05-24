@@ -124,18 +124,64 @@ def Selected_Stocks():
     selected_groups_frame.place(x=0,y=0,width=1300,height=650)
     
     f1=Frame(selected_groups_frame,bg="white",relief=RAISED,bd=2)
-    f1.place(x=0,y=0,width=1160,height=130)     
+    f1.place(x=0,y=0,width=1160,height=130)
+    l1f2=Label(f1,text="Name",font=("times new roman",9),bg="white",fg="black",borderwidth=5)
+    l1f2.place(x=0,y=0)
+    l1f2=Label(f1,text=": Product",font=("times new roman",9,"bold"),bg="white",fg="black",borderwidth=5)
+    l1f2.place(x=120,y=0)
+    l1=Label(f1,text="Group",font=("times new roman",9),bg="white",fg="black",borderwidth=5)
+    l1.place(x=0,y=20)
+    l1=Label(f1,text=": Primary",font=("times new roman",9,"bold"),bg="white",fg="black",borderwidth=5)
+    l1.place(x=120,y=20)
+    l1f3=Label(f1,text="Clossing Balance",font=("times new roman",9),bg="white",fg="black")
+    l1f3.place(x=0,y=40)
+    l1f3=Label(f1,text=" :",font=("times new roman",9,"bold"),bg="white",fg="black")
+    l1f3.place(x=120,y=40)
+    f3=Label(f1,text="Cost Price",font=("times new roman",9),bg="white",fg="black",borderwidth=5)
+    f3.place(x=0,y=60)
+    f3=Label(f1,text=":",font=("times new roman",9,"bold"),bg="white",fg="black",borderwidth=5)
+    f3.place(x=120,y=60)
+    f4=Label(f1,text="Costing Method",font=("times new roman",9),bg="white",fg="black",borderwidth=5)
+    f4.place(x=0,y=80)
+    f4=Label(f1,text=": Default",font=("times new roman",9,"bold"),bg="white",fg="black",borderwidth=5)
+    f4.place(x=120,y=80)
+    f4=Label(f1,text="Standard Cost",font=("times new roman",9),bg="white",fg="black",borderwidth=5)
+    f4.place(x=0,y=100)
+    f4=Label(f1,text=":",font=("times new roman",9,"bold"),bg="white",fg="black",borderwidth=5)
+    f4.place(x=120,y=100)
+
+    l1f2=Label(f1,text="Part No",font=("times new roman",9),bg="white",fg="black",borderwidth=5)
+    l1f2.place(x=600,y=0)
+    l1f2=Label(f1,text=":",font=("times new roman",9,"bold"),bg="white",fg="black",borderwidth=5)
+    l1f2.place(x=740,y=0)
+    l3=Label(f1,text="Category",font=("times new roman",9),bg="white",fg="black",borderwidth=5)
+    l3.place(x=600,y=20)
+    l3=Label(f1,text=":",font=("times new roman",9,"bold"),bg="white",fg="black",borderwidth=5)
+    l3.place(x=740,y=20)
+    l4=Label(f1,text="Clossing Value",font=("times new roman",9),bg="white",fg="black",borderwidth=5)
+    l4.place(x=600,y=40)
+    l4=Label(f1,text=":",font=("times new roman",9,"bold"),bg="white",fg="black",borderwidth=5)
+    l4.place(x=740,y=40)
+    l5=Label(f1,text="Standard selling price",font=("times new roman",9),bg="white",fg="black",borderwidth=5)
+    l5.place(x=600,y=60)
+    l5=Label(f1,text=":",font=("times new roman",9,"bold"),bg="white",fg="black",borderwidth=5)
+    l5.place(x=740,y=60)
+    l5=Label(f1,text="Market valuation method",font=("times new roman",9),bg="white",fg="black",borderwidth=5)
+    l5.place(x=600,y=80)
+    l5=Label(f1,text=":",font=("times new roman",9,"bold"),bg="white",fg="black",borderwidth=5)
+    l5.place(x=740,y=80)
+
 
     f14=Frame(selected_groups_frame,bg="white",relief=RAISED,bd=1)
-    f14.place(x=0,y=130,width=580,height=20)
-    #l1=Label(f14,text="Purchases",font=("times new roman",8,"bold"),bg="white",fg="black",borderwidth=5)
-    #l1.place(x=100,y=0,anchor="nw")
-
+    f14.place(x=0,y=120,width=580,height=25)
+    l2=Label(f14,text="Purchases",font=("times new roman",7,"bold"),bg="white",fg="black",borderwidth=5)
+    l2.place(x=250,y=0)
+    
     f11=Frame(selected_groups_frame,bg="white",relief=RAISED,bd=1)
-    f11.place(x=0,y=150,width=580,height=20)
+    f11.place(x=0,y=155,width=580,height=25)
 
     f12=Frame(selected_groups_frame,bg="white",relief=RAISED,bd=1)
-    f12.place(x=0,y=170,width=580,height=20)
+    f12.place(x=0,y=175,width=580,height=20)
 
     f13=Frame(selected_groups_frame,bg="white",relief=RAISED,bd=1)
     f13.place(x=0,y=190,width=580,height=190)
@@ -865,11 +911,9 @@ def create_age_group():
     sbmibtn=Button(Canvas4,text='Exit',borderwidth="0",background="#023047",
                                      foreground="white",width=8,font="-family {Segoe UI} -size 10 -weight bold ",command=Ageing_Analysis).place(relx=0.8, rely=0.720)
 
-
     global Canvas3
     Canvas3 = tk.Canvas(background="#e6ffff", insertbackground="black", relief="ridge",selectbackground="blue", selectforeground="white")
     Canvas3.place(relx=0.850, rely=0.100, relheight=0.8, relwidth=0.150)
-
 
 def selected_age_groups():
         global selected_groups_frame
@@ -900,6 +944,121 @@ def selected_age_groups():
         f20.place(x=883,y=565,width=275,height=30)
         l7f6=Label(f20,text="50",font=("times new roman",12,"bold"),bg="white",fg="black",borderwidth=0)
         l7f6.place(x=0,y=0,anchor="nw")
+
+def Cost_Estimation():
+    global Canvas1
+    Canvas1 = tk.Canvas( background="#B0B0B0", insertbackground="black", relief="ridge",selectbackground="blue", selectforeground="white")
+    Canvas1.place(relx=0, rely=0.070, relheight=0.800, relwidth=.850)
+    Label5 = Label(Canvas1,text='Company name',borderwidth="0", width=3, background="#3385ff",
+                                     foreground="#00254a",
+                                     font="-family {Segoe UI} -size 10 -weight bold ")
+    Label5.place(relx=0, rely=0, relheight=0.03, relwidth=0.999)
+
+    global Canvas4
+    Canvas4 = tk.Canvas(Canvas1, background="#ffffff", insertbackground="black", relief="ridge",selectbackground="blue", selectforeground="white")
+    Canvas4.place(relx=0.380, rely=0.0300, relheight=0.100, relwidth=0.180)
+    Label6 = Label(Canvas4,text='Name of group',borderwidth="0", width=7, background="white",
+                                     foreground="#00254a",
+                                     font="-family {Segoe UI} -size 10 -weight bold ")
+    Label6.place(relx=0.25, rely=0.20, relheight=0.30, relwidth=0.500)
+    Entry1 = Entry(Canvas4,width=28,borderwidth="3")
+    Entry1.place(relx=0.25, rely=0.60, relheight=0.30, relwidth=0.500)
+
+    global Canvas2
+    Canvas2 = tk.Canvas(Canvas1, background="#e6ffff", insertbackground="black", relief="ridge",selectbackground="blue", selectforeground="white")
+    Canvas2.place(relx=0.360, rely=0.120, relheight=0.900, relwidth=0.220)
+    Label5 = Label(Canvas2,text='List of Stock Groups',borderwidth="0", width=3, background="#3385ff",
+                                    foreground="#fff",
+                                     font="-family {Segoe UI} -size 10 -weight bold ")
+    Label5.place(relx=0, rely=0, relheight=0.04, relwidth=0.999)
+    btn=Button(Canvas2,text='Create',borderwidth="0",background="#e6ffff",activebackground="#e6ffff",
+                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=create_cost_estimation).place(relx=0.6,y=30,relwidth=0.350)
+    btn1=Button(Canvas2,text='Group1',borderwidth="0",background="#e6ffff",activebackground="#e6ffff",
+                                   foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Selected_Estimations).place(relx=0,y=50,relwidth=0.250)
+    btn2=Button(Canvas2,text='Group2',borderwidth="0",background="#e6ffff",activebackground="#e6ffff",
+                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Selected_Estimations).place(relx=0,y=70,relwidth=0.250)
+   
+    global Canvas3
+    Canvas3 = tk.Canvas(background="#e6ffff", insertbackground="black", relief="ridge",selectbackground="blue", selectforeground="white")
+    Canvas3.place(relx=0.850, rely=0.100, relheight=0.8, relwidth=0.150)
+
+def create_cost_estimation():
+    global Canvas1
+    Canvas1 = tk.Canvas( background="#B0B0B0", insertbackground="black", relief="ridge",selectbackground="blue", selectforeground="white")
+    Canvas1.place(relx=0, rely=0.070, relheight=0.800, relwidth=.850)
+
+    global Canvas4
+    Canvas4 = tk.Canvas(Canvas1, background="#ffffff", insertbackground="white", relief="ridge",selectbackground="white", selectforeground="white")
+    Canvas4.place(relx=0.01, rely=0.040, relheight=0.460, relwidth=0.450)
+    Label6 = Label(Canvas4,text='Name',borderwidth="0", width=7, background="white",foreground="#00254a",
+        font="-family {Segoe UI} -size 8 ")
+    Label6.place(relx=0.00, rely=0.010, relheight=0.07, relwidth=0.200)
+    Entry1 = Entry(Canvas4,width=28,borderwidth="3")
+    Entry1.place(relx=0.2, rely=0.010, relheight=0.07, relwidth=0.350)
+    Label7 = Label(Canvas4,text='(alias)',borderwidth="0", width=7, background="white",foreground="#00254a",
+        font="-family {Segoe UI} -size 8 ")
+    Label7.place(relx=0.00, rely=0.080, relheight=0.07, relwidth=0.200)
+    Entry1 = Entry(Canvas4,width=28,borderwidth="3")
+    Entry1.place(relx=0.2, rely=0.080, relheight=0.07, relwidth=0.350)
+    Label1 = Label(Canvas4,text='Under',borderwidth="0", width=7, background="white",foreground="#00254a",
+        font="-family {Segoe UI} -size 8 ")
+    Label1.place(relx=0.0, rely=0.260, relheight=0.07, relwidth=0.200)
+    options_list = ["Primary","Group1", "Group2","Group3","Group4"]
+    cmb=ttk.Combobox(Canvas4,values=options_list,font=("times new roman",10))
+    cmb.place(relx=0.2, rely=0.260, relheight=0.07, relwidth=0.350)
+    
+    Label1 = Label(Canvas4,text='Should quantities of items to be added',borderwidth="0", width=7, background="white",foreground="#00254a",
+        font="-family {Segoe UI} -size 8 ")
+    Label1.place(relx=0.0, rely=0.450, relheight=0.07, relwidth=0.400)
+    options_list = ["Yes","No"]
+    cmb=ttk.Combobox(Canvas4,values=options_list,font=("times new roman",10))
+    cmb.place(relx=0.5, rely=0.450, relheight=0.07, relwidth=0.350)
+
+    Label1 = Label(Canvas4,text='Set/Alter GST Details',borderwidth="0", width=7, background="white",foreground="#00254a",
+        font="-family {Segoe UI} -size 8 ")
+    Label1.place(relx=0.0, rely=0.550, relheight=0.07, relwidth=0.400)
+    options_list = ["Yes","No"]
+    cmb=ttk.Combobox(Canvas4,values=options_list,font=("times new roman",10))
+    cmb.place(relx=0.5, rely=0.550, relheight=0.07, relwidth=0.350)
+
+    sbmibtn=Button(Canvas4,text='Save',borderwidth="0",background="#023047",
+                                     foreground="white",width=8,font="-family {Segoe UI} -size 10 -weight bold ").place(relx=0.6, rely=0.720)
+    sbmibtn=Button(Canvas4,text='Exit',borderwidth="0",background="#023047",
+                                     foreground="white",width=8,font="-family {Segoe UI} -size 10 -weight bold ",command=Cost_Estimation).place(relx=0.8, rely=0.720)
+
+    global Canvas3
+    Canvas3 = tk.Canvas(background="#e6ffff", insertbackground="black", relief="ridge",selectbackground="blue", selectforeground="white")
+    Canvas3.place(relx=0.850, rely=0.100, relheight=0.8, relwidth=0.150)
+
+def Selected_Estimations():
+        global selected_ledgers_frame
+        selected_ledgers_frame=Frame(Canvas1,bg="white",relief=RAISED,bd=2)
+        selected_ledgers_frame.place(x=0,y=0,width=1300,height=650)
+        
+        f12=Frame(selected_ledgers_frame,bg="white",relief=RAISED,bd=2)
+        f12.place(x=0,y=0,width=1170,height=80)
+        f2=Label(f12,text="as at 1-Apr-22",font=("times new roman",11,"bold"),bg="white",fg="black",borderwidth=5)
+        f2.place(x=1050,y=5)
+        l1f2=Label(f12,text="Items Under:",font=("times new roman",11),bg="white",fg="black",borderwidth=5)
+        l1f2.place(x=0,y=5)
+        l1=Label(f12,text="Group",font=("times new roman",11,"bold"),bg="white",fg="black",borderwidth=5)
+        l1.place(x=100,y=5)
+        l1f3=Label(f12,text="BoM Type:",font=("times new roman",11),bg="white",fg="black")
+        l1f3.place(x=0,y=30)
+        f3=Label(f12,text="Default",font=("times new roman",11,"bold"),bg="white",fg="black",borderwidth=5)
+        f3.place(x=100,y=30)
+        
+        f18=Frame(selected_ledgers_frame,bg="white",relief=RAISED,bd=2)
+        f18.place(x=0,y=80,width=1170,height=30)
+        l5f6=Label(f18,text="Particulars",font=("times new roman",10),bg="white",fg="black",borderwidth=0)
+        l5f6.place(x=100,y=0)
+        f6=Label(f18,text="Qty",font=("times new roman",10),bg="white",fg="black",borderwidth=0)
+        f6.place(x=930,y=0)
+        f61=Label(f18,text="Cost",font=("times new roman",10),bg="white",fg="black",borderwidth=0)
+        f61.place(x=1000,y=0)
+        f62=Label(f18,text="Amount",font=("times new roman",10),bg="white",fg="black",borderwidth=0)
+        f62.place(x=1070,y=0)
+
 
 global screen
 screen=Tk()
@@ -960,7 +1119,7 @@ btn2=Button(Canvas4,text='Movement Analysis',borderwidth="0",background="#e6ffff
 btn2=Button(Canvas4,text='Ageing Analysis',borderwidth="0",background="#e6ffff",activebackground="#e6ffff",
                                      foreground="black",width=100,font="-family {Segoe UI} -size 10 ",command=Ageing_Analysis).place(relx=0,y=138,relwidth=1)
 btn2=Button(Canvas4,text='COst Estimation',borderwidth="0",background="#e6ffff",activebackground="#e6ffff",
-                                     foreground="black",width=100,font="-family {Segoe UI} -size 10 ").place(relx=0,y=178,relwidth=1)
+                                     foreground="black",width=100,font="-family {Segoe UI} -size 10 ",command=Cost_Estimation).place(relx=0,y=178,relwidth=1)
 btn2=Button(Canvas4,text='Quit',borderwidth="0",background="#e6ffff",activebackground="#e6ffff",
                                      foreground="black",width=100,font="-family {Segoe UI} -size 10 ").place(relx=0,y=218,relwidth=1)
 
