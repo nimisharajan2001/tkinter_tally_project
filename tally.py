@@ -1059,6 +1059,42 @@ def Selected_Estimations():
         f62=Label(f18,text="Amount",font=("times new roman",10),bg="white",fg="black",borderwidth=0)
         f62.place(x=1070,y=0)
 
+def table():
+    table = Label(top, text="Day Book", fg='black', bg='#00c8ff', font=(
+    'Arial 7 bold'), anchor='w').place(x=1, y=60, width=1219, height=13)
+    daybookform = Label(top, text="", fg='#00c8ff', bg='white', font=(
+    'Arial 9 underline'), anchor='w').place(x=1, y=73, width=1298, height=804)
+    b4 = Button(top, text="x", command=home, activeforeground="black", activebackground="#00c8ff",
+            fg='black', bg='#00c8ff', borderwidth=0, font=('Arial 10 bold'),).place(x=1280, y=60,height=12)
+
+    f11=Frame(top,bg="white",relief=RAISED,bd=0.5)
+    f11.place(x=0,y=73,width=1298,height=100)
+
+
+    l1f1=Label(f11,text="P a r t i c u l a r s",font=("Arial",11),fg="black",bg="white",anchor="w", borderwidth=0,relief=GROOVE,width=5,height=4)
+    l1f1.pack(fill=X,pady=12,padx=0)
+
+    frame=Frame(top,width=1210,)
+    frame.place(x=0,y=375,width=1300)
+
+    tabledaybook = ttk.Treeview(frame)
+    separator = ttk.Separator(top, orient='horizontal')
+    separator.place(relx=0.40, rely=0.16, relheight=0, relwidth=0.445)
+
+    separator = ttk.Separator(top, orient='vertical')
+    separator.place(relx=0.40, rely=0.09, relheight=0.605, relwidth=0)
+
+    separator = ttk.Separator(top, orient='vertical')
+    separator.place(relx=0.55, rely=0.16, relheight=0.537, relwidth=0)
+
+    separator = ttk.Separator(top, orient='vertical')
+    separator.place(relx=0.70, rely=0.16, relheight=0.537, relwidth=0)
+
+    separator = ttk.Separator(top, orient='horizontal')
+    separator.place(relx=0, rely=0.70, relheight=0, relwidth=0.845)
+
+    separator = ttk.Separator(top, orient='horizontal')
+    separator.place(relx=0, rely=0.73, relheight=0, relwidth=0.845)
 
 global screen
 screen=Tk()
